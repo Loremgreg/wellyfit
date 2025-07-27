@@ -3,10 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { GraduationCap, Award, MapPin, Heart } from "lucide-react";
 import trainerPortrait from "@/assets/trainer-portrait.jpg";
-
 const UberMich = () => {
-  return (
-    <div className="min-h-screen">
+  return <div className="min-h-screen">
       {/* Hero Section */}
       <section className="section-padding">
         <div className="container-custom">
@@ -24,11 +22,7 @@ const UberMich = () => {
             </div>
             <div>
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={trainerPortrait} 
-                  alt="Grégory - Personal Trainer und Physiotherapeut"
-                  className="w-full h-auto object-cover"
-                />
+                <img src={trainerPortrait} alt="Grégory - Personal Trainer und Physiotherapeut" className="w-full h-auto object-cover" />
               </div>
             </div>
           </div>
@@ -62,9 +56,7 @@ const UberMich = () => {
                   </div>
                   <h3 className="text-xl font-semibold">Wellness‑Massagen</h3>
                 </div>
-                <p className="text-muted-foreground">
-                  Entspannende Massagen (nicht‑therapeutisch) für Ihr Wohlbefinden und Ihre Regeneration.
-                </p>
+                <p className="text-muted-foreground">Entspannende Massagen für Ihr Wohlbefinden und zur Entspannung.</p>
               </Card>
             </div>
           </div>
@@ -170,8 +162,6 @@ const UberMich = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default UberMich;
