@@ -13,7 +13,7 @@ const Homepage = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-primary to-primary-dark text-primary-foreground">
         <div className="absolute inset-0 bg-black/20"></div>
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ backgroundImage: `url(${heroImage})` }}
         ></div>
@@ -52,8 +52,8 @@ const Homepage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Personal Training */}
             <Card className="card-elegant overflow-hidden">
-              <div className="h-64 bg-cover bg-center mb-6 rounded-lg" 
-                   style={{ backgroundImage: `url(${personalTrainingImage})` }}>
+              <div className="h-64 bg-cover bg-center mb-6 rounded-lg"
+                style={{ backgroundImage: `url(${personalTrainingImage})` }}>
               </div>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
                 Personal Training
@@ -86,8 +86,8 @@ const Homepage = () => {
 
             {/* Wellness Massage */}
             <Card className="card-elegant overflow-hidden">
-              <div className="h-64 bg-cover bg-center mb-6 rounded-lg" 
-                   style={{ backgroundImage: `url(${wellnessMassageImage})` }}>
+              <div className="h-64 bg-cover bg-center mb-6 rounded-lg"
+                style={{ backgroundImage: `url(${wellnessMassageImage})` }}>
               </div>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
                 Wellness-Massage
@@ -107,6 +107,14 @@ const Homepage = () => {
                 <li className="flex items-start gap-3">
                   <Heart className="text-accent mt-1 flex-shrink-0" size={20} />
                   <span>Zu Hause genießen</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Heart className="text-accent mt-1 flex-shrink-0" size={20} />
+                  <span>Fördert körperliche und mentale Regeneration</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Heart className="text-accent mt-1 flex-shrink-0" size={20} />
+                  <span>Professionelle Betreuung durch ausgebildeten Physiotherapeuten</span>
                 </li>
               </ul>
               <Button asChild variant="accent" size="lg" className="w-full">
@@ -129,13 +137,13 @@ const Homepage = () => {
                 Als in Belgien ausgebildeter Physiotherapeut und Personal Trainer begleite ich Sie professionell und individuell auf Ihrem Weg zu einem gesunden und aktiven Leben. Profitieren Sie von meinem ganzheitlichen Ansatz, der Ihr Wohlbefinden in den Mittelpunkt stellt.
               </p>
               <Button asChild variant="accent" size="lg" className="w-full">
-                <Link to="/uber-mich">Mehr erfahren</Link>
+                <Link to="/uber-mich">MEHR ERFAHREN</Link>
               </Button>
             </div>
             <div className="order-first lg:order-last">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={trainerPortrait} 
+                <img
+                  src={trainerPortrait}
                   alt="Grégory - Personal Trainer und Physiotherapeut"
                   className="w-full h-auto object-cover"
                 />

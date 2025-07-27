@@ -130,7 +130,7 @@ const FormMassage = () => {
                   <h3 className="text-lg font-semibold text-primary">Ihre Verfügbarkeiten</h3>
                   <p className="text-sm text-muted-foreground">Geben Sie Ihre verfügbaren Tage/Uhrzeiten bitte manuell ein.</p>
                   <div className="p-4 border border-border rounded-lg">
-                    <Label htmlFor="availabilityNotes">Verfügbarkeiten (Freitext)</Label>
+                    <Label htmlFor="availabilityNotes">Verfügbarkeiten</Label>
                     <Textarea
                       id="availabilityNotes"
                       rows={4}
