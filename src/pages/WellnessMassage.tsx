@@ -12,7 +12,7 @@ const WellnessMassage = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight">
-              Wellness‑Massage: Eine Pause für Körper und Geist – bei Ihnen zu Hause
+              Wellness-Massage zu Hause – Murnau am Staffelsee & Umgebung.
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">
               Gönnen Sie sich einen Moment völliger Auszeit mit einer Wellness‑Massage, die Muskelentspannung und mentale Entspannung harmonisch verbindet.
@@ -20,6 +20,9 @@ const WellnessMassage = () => {
             <p className="text-lg mb-12 text-primary-foreground/80 leading-relaxed">
               Als in Belgien ausgebildeter Physiotherapeut bringe ich ein fundiertes Wissen über die Anatomie und Funktionsweise des Körpers mit. Das ermöglicht es mir, Druck, Bewegungen und Rhythmus an Ihren Körperbau und Ihre Empfindlichkeit anzupassen und so eine maßgeschneiderte Massage anzubieten.
             </p>
+            <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
+              <Link to="/form-massage">Wellness-Massage Buchen</Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -42,7 +45,7 @@ const WellnessMassage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-4 items-start">
                   <Zap className="text-accent mt-1 flex-shrink-0" size={24} />
                   <div>
@@ -52,7 +55,7 @@ const WellnessMassage = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex gap-4 items-start">
                   <Heart className="text-accent mt-1 flex-shrink-0" size={24} />
                   <div>
@@ -65,8 +68,8 @@ const WellnessMassage = () => {
               </div>
             </div>
             <div>
-              <img 
-                src={wellnessMassageImage} 
+              <img
+                src={wellnessMassageImage}
                 alt="Wellness Massage"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
@@ -94,7 +97,7 @@ const WellnessMassage = () => {
                   Die Massage hilft, durch Stress und Angst verkrampfte Muskeln zu lockern, insbesondere im Bereich von Rücken, Schultern und Nacken.
                 </p>
               </Card>
-              
+
               <Card className="card-elegant text-center">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
@@ -106,7 +109,7 @@ const WellnessMassage = () => {
                   Die langsamen und rhythmischen Bewegungen führen zu einer Entspannung, die einen Zustand der Ruhe fördert, der einen erholsamen Schlaf begünstigt.
                 </p>
               </Card>
-              
+
               <Card className="card-elegant text-center">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
