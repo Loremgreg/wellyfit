@@ -9,28 +9,24 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Heart, Clock, MapPin } from "lucide-react";
 import wellnessMassageImage from "@/assets/wellness-massage.jpg";
-
 const FormMassage = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     toast({
       title: "Anfrage erfolgreich gesendet!",
-      description: "Ich melde mich innerhalb von 1-2 Werktagen bei Ihnen.",
+      description: "Ich melde mich innerhalb von 1-2 Werktagen bei Ihnen."
     });
-    
     setIsSubmitting(false);
   };
-
-  return (
-    <div className="min-h-screen bg-warm-gray-50">
+  return <div className="min-h-screen bg-warm-gray-50">
       {/* Hero Section */}
       <section className="section-padding bg-gradient-to-br from-primary to-primary-dark text-primary-foreground">
         <div className="container-custom">
@@ -126,29 +122,14 @@ const FormMassage = () => {
                   <div className="space-y-4">
                     <div>
                       <Label htmlFor="preferences">Schwerpunktbereiche (optional)</Label>
-                      <Textarea 
-                        id="preferences" 
-                        placeholder="z. B. Rücken, Schultern/Nacken, Beine …"
-                        rows={3}
-                      />
+                      <Textarea id="preferences" placeholder="z. B. Rücken, Schultern/Nacken, Beine …" rows={3} />
                     </div>
 
-                    <div>
-                      <Label htmlFor="sensitivities">Allergien/Hautempfindlichkeiten (optional)</Label>
-                      <Textarea 
-                        id="sensitivities" 
-                        placeholder="z. B. Allergien gegen Öle, Duftstoffe …"
-                        rows={3}
-                      />
-                    </div>
+                    
 
                     <div>
                       <Label htmlFor="pain">Haben Sie derzeit Beschwerden oder Verletzungen?</Label>
-                      <Textarea 
-                        id="pain" 
-                        placeholder="Ja/Nein. Falls ja: bitte Details (Ort, Art, seit wann, Einschränkungen)."
-                        rows={3}
-                      />
+                      <Textarea id="pain" placeholder="Ja/Nein. Falls ja: bitte Details (Ort, Art, seit wann, Einschränkungen)." rows={3} />
                     </div>
                   </div>
 
@@ -161,8 +142,7 @@ const FormMassage = () => {
                       Wählen Sie bitte mehrere Tage/Uhrzeiten, an denen die Massage bei Ihnen zu Hause stattfinden kann.
                     </p>
                     
-                    {[1, 2, 3].map((num) => (
-                      <div key={num} className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 border border-border rounded-lg">
+                    {[1, 2, 3].map(num => <div key={num} className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 border border-border rounded-lg">
                         <div>
                           <Label htmlFor={`day${num}`}>Wunschtag {num}</Label>
                           <Select>
@@ -184,8 +164,7 @@ const FormMassage = () => {
                           <Label htmlFor={`time${num}`}>Uhrzeit</Label>
                           <Input id={`time${num}`} type="time" />
                         </div>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
 
                   {/* Reference */}
@@ -223,13 +202,7 @@ const FormMassage = () => {
                     </Label>
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    variant="accent" 
-                    size="lg" 
-                    className="w-full"
-                    disabled={isSubmitting}
-                  >
+                  <Button type="submit" variant="accent" size="lg" className="w-full" disabled={isSubmitting}>
                     {isSubmitting ? "Wird gesendet..." : "Senden"}
                   </Button>
                 </form>
@@ -240,11 +213,7 @@ const FormMassage = () => {
             <div className="space-y-6">
               {/* Image */}
               <Card className="overflow-hidden">
-                <img 
-                  src={wellnessMassageImage} 
-                  alt="Wellness Massage"
-                  className="w-full h-48 object-cover"
-                />
+                <img src={wellnessMassageImage} alt="Wellness Massage" className="w-full h-48 object-cover" />
               </Card>
 
               {/* Pricing */}
@@ -350,8 +319,6 @@ const FormMassage = () => {
           </div>
         </div>
       </section>
-    </div>
-  );
+    </div>;
 };
-
 export default FormMassage;
