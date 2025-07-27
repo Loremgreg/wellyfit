@@ -250,62 +250,75 @@ const FormMassage = () => {
               {/* Pricing */}
               <Card className="card-elegant">
                 <h3 className="text-lg font-semibold mb-4 text-primary">Wellness‑Massagen Preise</h3>
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <div>
-                    <h4 className="font-semibold mb-2">Ganzer Körper:</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span>60 Minuten</span>
-                        <span className="font-semibold">90 €</span>
+                    <h4 className="font-semibold mb-3 text-primary">Ganzer Körper:</h4>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="font-medium text-sm mb-2">60 Minuten:</div>
+                        <div className="ml-4 space-y-1 text-sm">
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>Einzelsitzung</span>
+                            <span className="font-semibold">90 €</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>12er‑Karte</span>
+                            <span className="font-semibold">960 € (80 € pro Einheit)</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>24er‑Karte</span>
+                            <span className="font-semibold">1.800 € (75 € pro Einheit)</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>48er‑Karte</span>
+                            <span className="font-semibold">3.360 € (70 € pro Einheit)</span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex justify-between">
-                        <span>12er‑Karte (60 Min.)</span>
-                        <span className="font-semibold">960 € (80 € pro Einheit)</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>24er‑Karte (60 Min.)</span>
-                        <span className="font-semibold">1.800 € (75 € pro Einheit)</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>48er‑Karte (60 Min.)</span>
-                        <span className="font-semibold">3.360 € (70 € pro Einheit)</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>45 Minuten</span>
-                        <span className="font-semibold">67,5 €</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>12er‑Karte (45 Min.)</span>
-                        <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>24er‑Karte (45 Min.)</span>
-                        <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>48er‑Karte (45 Min.)</span>
-                        <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
+                      <div>
+                        <div className="font-medium text-sm mb-2">45 Minuten:</div>
+                        <div className="ml-4 space-y-1 text-sm">
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>Einzelsitzung</span>
+                            <span className="font-semibold">67,5 €</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>12er‑Karte</span>
+                            <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>24er‑Karte</span>
+                            <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
+                          </div>
+                          <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                            <span>48er‑Karte</span>
+                            <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Rücken Massage:</h4>
-                    <div className="space-y-2 text-sm">
-                      <div className="flex justify-between">
-                        <span>45 Minuten</span>
-                        <span className="font-semibold">67,5 €</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>12er‑Karte (45 Min.)</span>
-                        <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>24er‑Karte (45 Min.)</span>
-                        <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>48er‑Karte (45 Min.)</span>
-                        <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
+                    <h4 className="font-semibold mb-3 text-primary">Rücken Massage:</h4>
+                    <div>
+                      <div className="font-medium text-sm mb-2">45 Minuten:</div>
+                      <div className="ml-4 space-y-1 text-sm">
+                        <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                          <span>Einzelsitzung</span>
+                          <span className="font-semibold">67,5 €</span>
+                        </div>
+                        <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                          <span>12er‑Karte</span>
+                          <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
+                        </div>
+                        <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                          <span>24er‑Karte</span>
+                          <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
+                        </div>
+                        <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                          <span>48er‑Karte</span>
+                          <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
+                        </div>
                       </div>
                     </div>
                   </div>
