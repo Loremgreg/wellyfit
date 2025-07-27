@@ -231,22 +231,56 @@ const FormPT = () => {
               {/* Pricing */}
               <Card className="card-elegant">
                 <h3 className="text-lg font-semibold mb-4 text-primary">Preise für Personal Training</h3>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span>1 Einheit (60 Min.)</span>
-                    <span className="font-semibold">90 €</span>
+                <div className="space-y-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">Personal Training</h4>
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span>1 Einheit (60 Min.)</span>
+                        <span className="font-semibold">90 €</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>12 Einheiten</span>
+                        <span className="font-semibold">80 € / Einheit</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>24 Einheiten</span>
+                        <span className="font-semibold">75 € / Einheit</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>48 Einheiten</span>
+                        <span className="font-semibold">70 € / Einheit</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>72 Einheiten</span>
+                        <span className="font-semibold">65 € / Einheit</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex justify-between">
-                    <span>12 Einheiten</span>
-                    <span className="font-semibold">80 € / Einheit</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>24 Einheiten</span>
-                    <span className="font-semibold">75 € / Einheit</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>48 Einheiten</span>
-                    <span className="font-semibold">70 € / Einheit</span>
+                  <div>
+                    <h4 className="font-semibold mb-2 text-primary">Duo-Personal-Training (1 Trainer · 2 Personen)</h4>
+                    <div className="space-y-2">
+                      <div className="flex justify-between">
+                        <span>1 Einheit (60 Min.)</span>
+                        <span className="font-semibold">120 € (60 € p. P.)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>12 Einheiten</span>
+                        <span className="font-semibold">110 € (55 € p. P.)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>24 Einheiten</span>
+                        <span className="font-semibold">100 € (50 € p. P.)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>48 Einheiten</span>
+                        <span className="font-semibold">90 € (45 € p. P.)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>72 Einheiten</span>
+                        <span className="font-semibold">80 € (40 € p. P.)</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </Card>
