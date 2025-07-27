@@ -259,8 +259,32 @@ const FormMassage = () => {
                         <span className="font-semibold">90 €</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>12er‑Karte</span>
-                        <span className="font-semibold">80 € / Einheit</span>
+                        <span>12er‑Karte (60 Min.)</span>
+                        <span className="font-semibold">960 € (80 € pro Einheit)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>24er‑Karte (60 Min.)</span>
+                        <span className="font-semibold">1.800 € (75 € pro Einheit)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>48er‑Karte (60 Min.)</span>
+                        <span className="font-semibold">3.360 € (70 € pro Einheit)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>45 Minuten</span>
+                        <span className="font-semibold">67,5 €</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>12er‑Karte (45 Min.)</span>
+                        <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>24er‑Karte (45 Min.)</span>
+                        <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>48er‑Karte (45 Min.)</span>
+                        <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
                       </div>
                     </div>
                   </div>
@@ -272,8 +296,16 @@ const FormMassage = () => {
                         <span className="font-semibold">67,5 €</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>12er‑Karte</span>
-                        <span className="font-semibold">64,5 € / Einheit</span>
+                        <span>12er‑Karte (45 Min.)</span>
+                        <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>24er‑Karte (45 Min.)</span>
+                        <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>48er‑Karte (45 Min.)</span>
+                        <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
                       </div>
                     </div>
                   </div>
