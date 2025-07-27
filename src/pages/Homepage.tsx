@@ -29,7 +29,7 @@ const Homepage = () => {
               <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
                 <Link to="/personal-training">Personal Training</Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-10 py-6 bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+              <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
                 <Link to="/wellness-massage">Wellness-Massage</Link>
               </Button>
             </div>
