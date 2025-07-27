@@ -128,7 +128,7 @@ const Homepage = () => {
               <p className="text-lg mb-8 text-muted-foreground leading-relaxed">
                 Als in Belgien ausgebildeter Physiotherapeut und Personal Trainer begleite ich Sie professionell und individuell auf Ihrem Weg zu einem gesunden und aktiven Leben. Profitieren Sie von meinem ganzheitlichen Ansatz, der Ihr Wohlbefinden in den Mittelpunkt stellt.
               </p>
-              <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
+              <Button asChild variant="accent" size="lg" className="w-full">
                 <Link to="/uber-mich">Mehr erfahren</Link>
               </Button>
             </div>
