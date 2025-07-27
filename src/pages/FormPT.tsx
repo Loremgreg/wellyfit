@@ -294,8 +294,8 @@ const FormPT = () => {
 
               <div className="mt-6 p-4 bg-warm-gray-100 rounded-lg">
                 <p className="text-sm text-muted-foreground">
-                  <strong>Hinweis:</strong> Die Leistungen im Rahmen des Personal Trainings sind{" "}
-                  <strong>keine medizinische Behandlung</strong> und ersetzen keine Therapie.
+                  Hinweis: Die Leistungen im Rahmen des Personal Trainings sind
+                  keine medizinische Behandlung und ersetzen keine Therapie.
                   Bei gesundheitlichen Beschwerden bitte vorab ärztlich abklären.
                 </p>
               </div>

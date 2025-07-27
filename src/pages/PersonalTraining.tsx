@@ -12,7 +12,7 @@ const PersonalTraining = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-              Das Beste aus dem Personal Training
+              Personal Training zu Hause – Murnau am Staffelsee & Umgebung.
             </h1>
             <p className="text-xl md:text-2xl mb-12 text-primary-foreground/90 leading-relaxed">
               Erleben Sie neue Kraft, Mobilität und Wohlbefinden – mit maßgeschneidertem Coaching, das perfekt auf Ihr Niveau und Ihre Ziele abgestimmt ist.
@@ -32,23 +32,16 @@ const PersonalTraining = () => {
               <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6 text-primary">
                 Personalisierte Analyse
               </h2>
-              <p className="text-lg mb-8 text-muted-foreground leading-relaxed">
-                Ich beurteile Ihre Stärken und Schwächen, um einen individuellen Plan für Sie zu entwickeln. Mit meiner Ausbildung als Physiotherapeut erkenne ich Bewegungsmuster und erstelle ein Training, das Ihre spezifischen Bedürfnisse berücksichtigt.
-              </p>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex items-center gap-3">
-                  <Target className="text-accent" size={24} />
-                  <span className="font-medium">Zielgerichtete Analyse</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Users className="text-accent" size={24} />
-                  <span className="font-medium">Individuelle Betreuung</span>
-                </div>
+              <div className="text-lg text-muted-foreground leading-relaxed space-y-6 mb-8">
+                <p>Ich beurteile Ihre Stärken und Schwächen, um einen individuellen Plan für Sie zu entwickeln. Dank meiner Erfahrung als <strong>Physiotherapeut sowie als Personal Trainer</strong> erkenne ich Bewegungsmuster und entwickle ein Trainingsprogramm, das Ihre spezifischen Bedürfnisse berücksichtigt.</p>
+                <p>Diese Analyse hilft, den effektivsten Ausgangspunkt zu finden und das passende Programm zu entwickeln.</p>
+                <p>Zufälliges Training kann keinen nachhaltigen Fortschritt bieten. Der effektivste Weg beginnt damit, die Grundlagen zu beurteilen und darauf aufzubauen.</p>
+                <p>Das sind die besten Methoden, die ich in der Arbeit mit allen – von Sportlern bis hin zu Senioren und Verletzten – gelernt habe.</p>
               </div>
             </div>
             <div>
-              <img 
-                src={personalTrainingImage} 
+              <img
+                src={personalTrainingImage}
                 alt="Personal Training Session"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
@@ -73,10 +66,10 @@ const PersonalTraining = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Anfänger</h3>
                 <p className="text-muted-foreground">
-                  Perfekt für Einsteiger, die sicher und strukturiert mit dem Training beginnen möchten.
+                  Für alle, die aktiv werden oder ihre Fitness verbessern möchten – unabhängig von Alter und sportlicher Erfahrung.
                 </p>
               </Card>
-              
+
               <Card className="card-elegant text-center">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
@@ -85,10 +78,10 @@ const PersonalTraining = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Post-Verletzung</h3>
                 <p className="text-muted-foreground">
-                  Sichere Rückkehr zum Sport nach Verletzungen mit physiotherapeutischer Begleitung.
+                  Nach Verletzungen oder bei körperlichen Einschränkungen: Mobilität, Kraft und Selbstvertrauen schrittweise zurückgewinnen.
                 </p>
               </Card>
-              
+
               <Card className="card-elegant text-center">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto">
@@ -97,7 +90,7 @@ const PersonalTraining = () => {
                 </div>
                 <h3 className="text-xl font-semibold mb-4">Senioren</h3>
                 <p className="text-muted-foreground">
-                  Altersgerechtes Training für Mobilität, Kraft und Lebensqualität.
+                  Altersgerechtes Training für Mobilität, Gleichgewicht, Kraft und Lebensqualität.
                 </p>
               </Card>
             </div>
@@ -124,7 +117,7 @@ const PersonalTraining = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex gap-6 items-start">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl flex-shrink-0">
                   2
@@ -136,7 +129,7 @@ const PersonalTraining = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="flex gap-6 items-start">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold text-xl flex-shrink-0">
                   3
@@ -149,7 +142,7 @@ const PersonalTraining = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-center mt-12">
               <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
                 <Link to="/form-pt">MIT MIR TRAINIEREN</Link>
@@ -164,9 +157,9 @@ const PersonalTraining = () => {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <Card className="card-elegant">
-              <h3 className="text-xl font-semibold mb-4 text-primary">Wichtiger Hinweis</h3>
+              <h3 className="text-xl font-semibold mb-4 text-primary">Hinweis</h3>
               <p className="text-muted-foreground leading-relaxed">
-                Die angebotenen Leistungen im Rahmen von Personal Training sind keine medizinische Behandlung und ersetzen keine Therapie oder Heilbehandlung. Das Coaching ersetzt nicht den Besuch bei einem Arzt, Heilpraktiker oder Physiotherapeuten. Bei bestehenden gesundheitlichen Beschwerden oder Vorerkrankungen wird dringend empfohlen, vor Trainingsbeginn eine medizinische Fachperson zu konsultieren.
+                Die angebotenen Leistungen im Rahmen von Personal Training sind keine medizinische Behandlung und ersetzen keine Therapie oder Heilbehandlung. Das Coaching ersetzt nicht den Besuch bei einem Arzt. Bei bestehenden gesundheitlichen Beschwerden oder Vorerkrankungen wird dringend empfohlen, vor Trainingsbeginn eine medizinische Fachperson zu konsultieren.
               </p>
             </Card>
           </div>
