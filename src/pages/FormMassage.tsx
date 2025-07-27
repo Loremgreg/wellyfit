@@ -120,10 +120,7 @@ const FormMassage = () => {
 
                   {/* Preferences */}
                   <div className="space-y-4">
-                    <div>
-                      <Label htmlFor="preferences">Schwerpunktbereiche (optional)</Label>
-                      <Textarea id="preferences" placeholder="z. B. Rücken, Schultern/Nacken, Beine …" rows={3} />
-                    </div>
+                    
 
                     
 
