@@ -19,24 +19,24 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/personal-training" 
+                <Link
+                  to="/personal-training"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Personal Training
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/wellness-massage" 
+                <Link
+                  to="/wellness-massage"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Wellness-Massage
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/uber-mich" 
+                <Link
+                  to="/uber-mich"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Über mich
@@ -50,16 +50,16 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">Rechtliches</h4>
             <ul className="space-y-2">
               <li>
-                <Link 
-                  to="/impressum" 
+                <Link
+                  to="/impressum"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Impressum
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/datenschutz" 
+                <Link
+                  to="/datenschutz"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Datenschutz
@@ -71,7 +71,7 @@ const Footer = () => {
 
         <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center">
           <p className="text-primary-foreground/60">
-            © 2024 FitWell. Alle Rechte vorbehalten.
+            © 2025 FitWell. Alle Rechte vorbehalten.
           </p>
         </div>
       </div>

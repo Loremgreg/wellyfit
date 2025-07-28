@@ -11,6 +11,8 @@ import WellnessMassage from "./pages/WellnessMassage";
 import UberMich from "./pages/UberMich";
 import FormPT from "./pages/FormPT";
 import FormMassage from "./pages/FormMassage";
+import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +33,8 @@ const App = () => (
               <Route path="/uber-mich" element={<UberMich />} />
               <Route path="/form-pt" element={<FormPT />} />
               <Route path="/form-massage" element={<FormMassage />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/datenschutz" element={<Datenschutz />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
