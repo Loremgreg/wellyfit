@@ -64,19 +64,19 @@ const Homepage = () => {
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-accent mt-1 flex-shrink-0" size={20} />
-                  <span>Möchten Sie Ihre Kraft und Beweglichkeit steigern?</span>
+                  <span>Steigern Sie Kraft und Beweglichkeit – bleiben Sie aktiv und unabhängig</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-accent mt-1 flex-shrink-0" size={20} />
-                  <span>Möchten Sie die Grundlagen des Trainings erlernen – inklusive richtigem Heben von Gewichten, Athletikentwicklung und Verbesserung der Beweglichkeit?</span>
+                  <span>Lernen Sie Übungen korrekt auszuführen – sicher und mit Freude</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-accent mt-1 flex-shrink-0" size={20} />
-                  <span>Möchten Sie wieder mit dem Laufen oder Ihrem Sport starten, benötigen aber eine gezielte Anleitung?</span>
+                  <span>Starten Sie sicher wieder mit Ihrem Lieblingssport – individuell betreut, Ihrem Niveau angepasst</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle className="text-accent mt-1 flex-shrink-0" size={20} />
-                  <span>Möchten Sie lernen, wie Sie sicher und nachhaltig für Ihre allgemeine Gesundheit und Fitness trainieren?</span>
+                  <span>Individuelles Training für Fitness, Gesundheit und Lebensqualität</span>
                 </li>
               </ul>
               <Button asChild variant="accent" size="lg" className="w-full">
