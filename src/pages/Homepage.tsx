@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Target, Heart } from "lucide-react";
+import HeroAnimation from "@/components/HeroAnimation";
 import heroImage from "@/assets/hero-image.jpg";
 import personalTrainingImage from "@/assets/personal-training.jpg";
 import wellnessMassageImage from "@/assets/wellness-massage.jpg";
@@ -22,10 +23,14 @@ const Homepage = () => {
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
               Ihr Weg zu mehr Kraft und Wohlbefinden beginnt hier.
             </h1>
-            <p className="text-xl md:text-2xl mb-12 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
               Personal Training & Wellness-Massagen – individuell, professionell und bei Ihnen zu Hause.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            
+            {/* Hero Animation */}
+            <HeroAnimation />
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
                 <Link to="/personal-training">Personal Training</Link>
               </Button>
