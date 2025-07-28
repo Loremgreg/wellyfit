@@ -24,7 +24,7 @@ const Impressum = () => {
                         <br />
                         Telefon: +49 1746 260578
                         <br />
-                        E-Mail: gregorybastin.de@gmail.com
+                        E-Mail: gregory.fitwell@gmail.com
                         <br />
                         <strong>Vertretungsberechtigter:</strong> Gregory Bastin (Inhaber)
                         <br />

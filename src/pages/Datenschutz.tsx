@@ -21,7 +21,7 @@ const Datenschutz = () => {
             <br />
             Anschrift: Am Mösl 29, 82418 Murnau, Deutschland
             <br />
-            E‑Mail: gregorybastin.de@gmail.com
+            E‑Mail: gregory.fitwell@gmail.com
             <br />
             Telefon: +49 1746 260578
           </p>

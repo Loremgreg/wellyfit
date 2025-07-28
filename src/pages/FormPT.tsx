@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,19 +7,29 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
-import { CheckCircle, Clock, Phone } from "lucide-react";
 import personalTrainingImage from "@/assets/personal-training.jpg";
+import Recaptcha from "@/components/custom/recaptcha";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const FormPT = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!captchaValue) {
+      toast({
+        title: "Bitte bestätigen Sie, dass Sie kein Roboter sind.",
+        variant: "destructive",
+      });
+      return;
+    }
     setIsSubmitting(true);
 
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
       title: "Anfrage erfolgreich gesendet!",
@@ -27,6 +37,8 @@ const FormPT = () => {
     });
 
     setIsSubmitting(false);
+    recaptchaRef.current?.reset();
+    setCaptchaValue(null);
   };
 
   return (
@@ -173,6 +185,10 @@ const FormPT = () => {
                         Datenschutzerklärung
                       </a>.
                     </Label>
+                  </div>
+
+                  <div className="flex items-center space-x-2">
+                    <Recaptcha ref={recaptchaRef} onChange={setCaptchaValue} />
                   </div>
 
                   <Button
