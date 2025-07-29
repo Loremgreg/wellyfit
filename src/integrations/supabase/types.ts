@@ -14,7 +14,108 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      personal_training_requests: {
+        Row: {
+          activity_routine: string
+          background: string | null
+          city: string | null
+          consent_given: boolean
+          created_at: string
+          email: string
+          first_name: string
+          goals: string
+          id: string
+          last_name: string
+          pain_injuries: string
+          phone: string | null
+          reference_name: string | null
+          reference_source: string
+          updated_at: string
+        }
+        Insert: {
+          activity_routine: string
+          background?: string | null
+          city?: string | null
+          consent_given?: boolean
+          created_at?: string
+          email: string
+          first_name: string
+          goals: string
+          id?: string
+          last_name: string
+          pain_injuries: string
+          phone?: string | null
+          reference_name?: string | null
+          reference_source: string
+          updated_at?: string
+        }
+        Update: {
+          activity_routine?: string
+          background?: string | null
+          city?: string | null
+          consent_given?: boolean
+          created_at?: string
+          email?: string
+          first_name?: string
+          goals?: string
+          id?: string
+          last_name?: string
+          pain_injuries?: string
+          phone?: string | null
+          reference_name?: string | null
+          reference_source?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      wellness_massage_requests: {
+        Row: {
+          availability_notes: string | null
+          city: string | null
+          consent_given: boolean
+          created_at: string
+          email: string
+          first_name: string
+          id: string
+          last_name: string
+          pain_injuries: string | null
+          phone: string | null
+          reference_name: string | null
+          reference_source: string
+          updated_at: string
+        }
+        Insert: {
+          availability_notes?: string | null
+          city?: string | null
+          consent_given?: boolean
+          created_at?: string
+          email: string
+          first_name: string
+          id?: string
+          last_name: string
+          pain_injuries?: string | null
+          phone?: string | null
+          reference_name?: string | null
+          reference_source: string
+          updated_at?: string
+        }
+        Update: {
+          availability_notes?: string | null
+          city?: string | null
+          consent_given?: boolean
+          created_at?: string
+          email?: string
+          first_name?: string
+          id?: string
+          last_name?: string
+          pain_injuries?: string | null
+          phone?: string | null
+          reference_name?: string | null
+          reference_source?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
