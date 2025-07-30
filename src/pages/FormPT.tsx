@@ -31,7 +31,7 @@ const FormPT = () => {
 
     try {
       const formData = new FormData(e.target as HTMLFormElement);
-      
+
       // Préparer les données pour Supabase
       const requestData = {
         first_name: formData.get('firstName') as string,
@@ -306,23 +306,23 @@ const FormPT = () => {
                     <div className="space-y-2">
                       <div className="flex justify-between">
                         <span>1 Einheit (60 Min.)</span>
-                        <span className="font-semibold">120 € (60 € p. P.)</span>
+                        <span className="font-semibold">120 € / Einheit (60 € p. P.)</span>
                       </div>
                       <div className="flex justify-between">
                         <span>12 Einheiten</span>
-                        <span className="font-semibold">110 € (55 € p. P.)</span>
+                        <span className="font-semibold">110 € / Einheit (55 € p. P.)</span>
                       </div>
                       <div className="flex justify-between">
                         <span>24 Einheiten</span>
-                        <span className="font-semibold">100 € (50 € p. P.)</span>
+                        <span className="font-semibold">100 € / Einheit (50 € p. P.)</span>
                       </div>
                       <div className="flex justify-between">
                         <span>48 Einheiten</span>
-                        <span className="font-semibold">90 € (45 € p. P.)</span>
+                        <span className="font-semibold">90 € / Einheit (45 € p. P.)</span>
                       </div>
                       <div className="flex justify-between">
                         <span>72 Einheiten</span>
-                        <span className="font-semibold">80 € (40 € p. P.)</span>
+                        <span className="font-semibold">80 € / Einheit (40 € p. P.)</span>
                       </div>
                     </div>
                   </div>
