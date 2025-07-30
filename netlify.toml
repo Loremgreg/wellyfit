@@ -1,0 +1,12 @@
+# Configuration file for Netlify
+
+[build]
+  # This tells the Netlify build system where to find the built site.
+  publish = "dist"
+  command = "npm run build"
+
+# This section configures the secrets scanner
+[build.processing.secrets]
+  # We tell the scanner to ignore the VITE_RECAPTCHA_SITE_KEY because it's a public key
+  # and is meant to be in the final JavaScript file.
+  omit_keys = ["VITE_RECAPTCHA_SITE_KEY"]
