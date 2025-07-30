@@ -42,7 +42,7 @@ const Impressum = () => {
                     </h2>
                     <p>
                         Gregory Bastin, Am Mösl 29, 82418 Murnau, Deutschland, E-Mail:
-                        gregorybastin.de@gmail.com.
+                        gregory.fitwell@gmail.com.
                     </p>
                 </section>
 
