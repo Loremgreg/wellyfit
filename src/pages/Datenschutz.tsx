@@ -15,7 +15,7 @@ const Datenschutz = () => {
           </h2>
           <p>
             Verantwortlich für die Datenverarbeitung auf dieser Website
-            („wellyfit“) ist:
+            (Gregory Bast) ist:
             <br />
             Name: Gregory Bastin
             <br />
