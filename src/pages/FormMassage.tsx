@@ -32,7 +32,7 @@ const FormMassage = () => {
 
     try {
       const formData = new FormData(e.target as HTMLFormElement);
-      
+
       // Préparer les données pour Supabase
       const requestData = {
         first_name: formData.get('firstName') as string,
@@ -276,15 +276,21 @@ const FormMassage = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span>12er‑Karte</span>
-                          <span className="font-semibold">960 € (80 € pro Einheit)</span>
+                          <span className="font-semibold">
+                            80 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 960 €)</span>
+                          </span>
                         </div>
                         <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span>24er‑Karte</span>
-                          <span className="font-semibold">1.800 € (75 € pro Einheit)</span>
+                          <span className="font-semibold">
+                            75 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 1.800 €)</span>
+                          </span>
                         </div>
                         <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span>48er‑Karte</span>
-                          <span className="font-semibold">3.360 € (70 € pro Einheit)</span>
+                          <span className="font-semibold">
+                            70 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 3.360 €)</span>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -297,15 +303,21 @@ const FormMassage = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span>12er‑Karte</span>
-                          <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
+                          <span className="font-semibold">
+                            64,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 774 €)</span>
+                          </span>
                         </div>
                         <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span>24er‑Karte</span>
-                          <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
+                          <span className="font-semibold">
+                            61,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 1.476 €)</span>
+                          </span>
                         </div>
                         <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                           <span>48er‑Karte</span>
-                          <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
+                          <span className="font-semibold">
+                            58,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 2.808 €)</span>
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -322,15 +334,21 @@ const FormMassage = () => {
                       </div>
                       <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                         <span>12er‑Karte</span>
-                        <span className="font-semibold">774 € (64,5 € pro Einheit)</span>
+                        <span className="font-semibold">
+                          64,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 774 €)</span>
+                        </span>
                       </div>
                       <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                         <span>24er‑Karte</span>
-                        <span className="font-semibold">1.476 € (61,5 € pro Einheit)</span>
+                        <span className="font-semibold">
+                          61,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 1.476 €)</span>
+                        </span>
                       </div>
                       <div className="flex flex-col sm:flex-row sm:justify-between gap-1">
                         <span>48er‑Karte</span>
-                        <span className="font-semibold">2.808 € (58,5 € pro Einheit)</span>
+                        <span className="font-semibold">
+                          58,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 2.808 €)</span>
+                        </span>
                       </div>
                     </div>
                   </div>

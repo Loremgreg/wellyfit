@@ -280,24 +280,34 @@ const FormPT = () => {
                     <h4 className="font-semibold mb-2 text-primary">Personal Training</h4>
                     <div className="space-y-2">
                       <div className="flex justify-between">
-                        <span>1 Einheit (60 Min.)</span>
-                        <span className="font-semibold">90 €</span>
+                        <span>1 Einheit</span>
+                        <span className="font-semibold">
+                          90 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min.</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>12 Einheiten</span>
-                        <span className="font-semibold">80 € / Einheit</span>
+                        <span className="font-semibold">
+                          80 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min.</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>24 Einheiten</span>
-                        <span className="font-semibold">75 € / Einheit</span>
+                        <span className="font-semibold">
+                          75 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min.</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>48 Einheiten</span>
-                        <span className="font-semibold">70 € / Einheit</span>
+                        <span className="font-semibold">
+                          70 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min.</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>72 Einheiten</span>
-                        <span className="font-semibold">65 € / Einheit</span>
+                        <span className="font-semibold">
+                          65 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min.</span>
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -305,24 +315,34 @@ const FormPT = () => {
                     <h4 className="font-semibold mb-2 text-primary">Duo Training (1 Trainer · 2 Personen)</h4>
                     <div className="space-y-2">
                       <div className="flex justify-between">
-                        <span>1 Einheit (60 Min.)</span>
-                        <span className="font-semibold">120 € / Einheit (60 € p. P.)</span>
+                        <span>1 Einheit</span>
+                        <span className="font-semibold">
+                          120 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min. (60 € p. P.)</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>12 Einheiten</span>
-                        <span className="font-semibold">110 € / Einheit (55 € p. P.)</span>
+                        <span className="font-semibold">
+                          110 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min. (55 € p. P.)</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>24 Einheiten</span>
-                        <span className="font-semibold">100 € / Einheit (50 € p. P.)</span>
+                        <span className="font-semibold">
+                          100 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min. (50 € p. P.)</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>48 Einheiten</span>
-                        <span className="font-semibold">90 € / Einheit (45 € p. P.)</span>
+                        <span className="font-semibold">
+                          90 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min. (45 € p. P.)</span>
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span>72 Einheiten</span>
-                        <span className="font-semibold">80 € / Einheit (40 € p. P.)</span>
+                        <span className="font-semibold">
+                          80 € <span className="text-xs font-normal text-muted-foreground">/ 60 Min. (40 € p. P.)</span>
+                        </span>
                       </div>
                     </div>
                   </div>
