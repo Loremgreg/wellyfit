@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 import personalTrainingImage from "@/assets/personal-training.jpg";
 import Recaptcha from "@/components/custom/recaptcha";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -28,17 +29,69 @@ const FormPT = () => {
     }
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const formData = new FormData(e.target as HTMLFormElement);
+      
+      // Préparer les données pour Supabase
+      const requestData = {
+        first_name: formData.get('firstName') as string,
+        last_name: formData.get('lastName') as string,
+        email: formData.get('email') as string,
+        city: formData.get('city') as string || null,
+        phone: formData.get('phone') as string || null,
+        background: formData.get('background') as string || null,
+        goals: formData.get('goals') as string,
+        activity_routine: formData.get('routine') as string,
+        pain_injuries: formData.get('pain') as string,
+        reference_source: formData.get('refSource') as string,
+        reference_name: formData.get('refName') as string || null,
+        consent_given: true
+      };
 
-    toast({
-      title: "Anfrage erfolgreich gesendet!",
-      description: "Ich melde mich innerhalb von 1-2 Werktagen bei Ihnen.",
-    });
+      // Sauvegarder dans Supabase
+      const { error: dbError } = await supabase
+        .from('personal_training_requests')
+        .insert(requestData);
 
-    setIsSubmitting(false);
-    recaptchaRef.current?.reset();
-    setCaptchaValue(null);
+      if (dbError) {
+        throw new Error('Erreur lors de la sauvegarde des données');
+      }
+
+      // Envoyer l'email de confirmation
+      const { error: emailError } = await supabase.functions.invoke('send-confirmation-email', {
+        body: {
+          firstName: requestData.first_name,
+          lastName: requestData.last_name,
+          email: requestData.email,
+          type: 'personal-training'
+        }
+      });
+
+      if (emailError) {
+        console.error('Erreur email:', emailError);
+        // Ne pas empêcher le succès si l'email échoue
+      }
+
+      toast({
+        title: "Anfrage erfolgreich gesendet!",
+        description: "Ich melde mich innerhalb von 1-2 Werktagen bei Ihnen.",
+      });
+
+      // Réinitialiser le formulaire
+      (e.target as HTMLFormElement).reset();
+      recaptchaRef.current?.reset();
+      setCaptchaValue(null);
+
+    } catch (error) {
+      console.error('Erreur:', error);
+      toast({
+        title: "Fehler beim Senden",
+        description: "Bitte versuchen Sie es erneut.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -84,29 +137,29 @@ const FormPT = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="firstName">Vorname *</Label>
-                        <Input id="firstName" required />
+                        <Input id="firstName" name="firstName" required />
                       </div>
                       <div>
                         <Label htmlFor="lastName">Nachname *</Label>
-                        <Input id="lastName" required />
+                        <Input id="lastName" name="lastName" required />
                       </div>
                     </div>
 
                     <div>
                       <Label htmlFor="email">E-Mail *</Label>
-                      <Input id="email" type="email" required />
+                      <Input id="email" name="email" type="email" required />
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <Label htmlFor="city">Stadt</Label>
-                        <Input id="city" placeholder="z. B. Murnau" />
+                        <Input id="city" name="city" placeholder="z. B. Murnau" />
                       </div>
                     </div>
 
                     <div>
                       <Label htmlFor="phone">Telefon</Label>
-                      <Input id="phone" type="tel" placeholder="+49…" />
+                      <Input id="phone" name="phone" type="tel" placeholder="+49…" />
                     </div>
                   </div>
 
@@ -116,6 +169,7 @@ const FormPT = () => {
                       <Label htmlFor="background">Kurz zu Ihnen (Hintergrund)</Label>
                       <Textarea
                         id="background"
+                        name="background"
                         placeholder="Beruf, Aktivitätslevel, Trainingshistorie …"
                         rows={3}
                       />
@@ -125,6 +179,7 @@ const FormPT = () => {
                       <Label htmlFor="goals">Welche Ziele und Ergebnisse möchten Sie erreichen? *</Label>
                       <Textarea
                         id="goals"
+                        name="goals"
                         placeholder="Bitte beschreiben Sie Ihre Ziele und gewünschten Ergebnisse."
                         rows={3}
                         required
@@ -135,6 +190,7 @@ const FormPT = () => {
                       <Label htmlFor="routine">Aktivitätsroutine der letzten 3 Monate *</Label>
                       <Textarea
                         id="routine"
+                        name="routine"
                         placeholder="z. B. 2×/Woche Spazieren, 1× Yoga …"
                         rows={3}
                         required
@@ -145,6 +201,7 @@ const FormPT = () => {
                       <Label htmlFor="pain">Haben Sie derzeit Schmerzen oder Verletzungen? *</Label>
                       <Textarea
                         id="pain"
+                        name="pain"
                         placeholder="Ja/Nein. Falls ja: bitte Details (Ort, Art, seit wann, Einschränkungen)."
                         rows={3}
                         required
@@ -156,7 +213,7 @@ const FormPT = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="refSource">Wie haben Sie von mir erfahren? *</Label>
-                      <Select required>
+                      <Select name="refSource" required>
                         <SelectTrigger>
                           <SelectValue placeholder="Bitte wählen" />
                         </SelectTrigger>
@@ -171,7 +228,7 @@ const FormPT = () => {
                     </div>
                     <div>
                       <Label htmlFor="refName">Falls empfohlen: Name der Person</Label>
-                      <Input id="refName" />
+                      <Input id="refName" name="refName" />
                     </div>
                   </div>
 
