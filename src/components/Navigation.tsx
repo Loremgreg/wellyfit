@@ -30,17 +30,16 @@ const Navigation = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`font-medium transition-colors ${
-                  isActive(item.href)
+                className={`font-medium transition-colors ${isActive(item.href)
                     ? "text-primary"
                     : "text-foreground hover:text-primary"
-                }`}
+                  }`}
               >
                 {item.name}
               </Link>
             ))}
             <Button asChild variant="accent" size="lg">
-              <Link to="/#los-gehts">Los geht's!</Link>
+              <a href="/#los-gehts">Los geht's!</a>
             </Button>
           </div>
 
@@ -63,20 +62,19 @@ const Navigation = () => {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`font-medium transition-colors ${
-                    isActive(item.href)
+                  className={`font-medium transition-colors ${isActive(item.href)
                       ? "text-primary"
                       : "text-foreground hover:text-primary"
-                  }`}
+                    }`}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               <Button asChild variant="accent" size="lg" className="w-full">
-                <Link to="/#los-gehts" onClick={() => setIsOpen(false)}>
+                <a href="/#los-gehts" onClick={() => setIsOpen(false)}>
                   Los geht's!
-                </Link>
+                </a>
               </Button>
             </div>
           </div>
