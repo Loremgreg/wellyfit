@@ -9,7 +9,7 @@ const Recaptcha = forwardRef<ReCAPTCHA, RecaptchaProps>(({ onChange }, ref) => {
   return (
     <ReCAPTCHA
       ref={ref}
-      sitekey="6LeIxAcpAAAAAJa_d4V2k_2v_5_1_1_1_1_1_1_1_1_1_1"
+      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
       onChange={onChange}
     />
   );
