@@ -23,7 +23,7 @@ const Homepage = () => {
               Ihr Weg zu mehr Kraft und Wohlbefinden beginnt hier.
             </h1>
             <p className="text-xl md:text-2xl mb-12 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-              Personal Training & Wellness-Massagen – individuell, professionell und bei Ihnen zu Hause.
+              Personal Training & Wellness-Massage – individuell, professionell und bei Ihnen zu Hause.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
