@@ -21,7 +21,7 @@ const Navigation = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link to="/" className="text-2xl font-heading font-bold text-primary">
-            FitWell
+            Gregory Bast
           </Link>
 
           {/* Desktop Navigation */}
@@ -31,8 +31,8 @@ const Navigation = () => {
                 key={item.name}
                 to={item.href}
                 className={`font-medium transition-colors ${isActive(item.href)
-                    ? "text-primary"
-                    : "text-foreground hover:text-primary"
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
                   }`}
               >
                 {item.name}
@@ -63,8 +63,8 @@ const Navigation = () => {
                   key={item.name}
                   to={item.href}
                   className={`font-medium transition-colors ${isActive(item.href)
-                      ? "text-primary"
-                      : "text-foreground hover:text-primary"
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
                     }`}
                   onClick={() => setIsOpen(false)}
                 >
