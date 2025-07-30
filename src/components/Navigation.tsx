@@ -20,8 +20,17 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-heading font-bold text-primary">
-            Gregory Bast
+          <Link to="/" className="relative inline-block focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#EB8160]">
+            {/* Rounded button with "bast." */}
+            <div className="rounded-lg bg-[#EB8160] px-5 py-2">
+              <span className="text-2xl font-heading font-bold text-[#E4E2DD]">
+                bast.
+              </span>
+            </div>
+            {/* Sub-text positioned below and to the right */}
+            <span className="absolute top-full left-1/4 mt-0 ml-1 block text-xs font-semibold text-gray-700 whitespace-nowrap">
+              Personal Training & Massage
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
