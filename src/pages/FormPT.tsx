@@ -58,7 +58,8 @@ const FormPT = () => {
       }
 
       // Envoyer l'email de confirmation
-      const { error: emailError } = await supabase.functions.invoke('send-confirmation-email', {
+      console.log('Tentative d\'envoi d\'email de confirmation...');
+      const { data: emailData, error: emailError } = await supabase.functions.invoke('send-confirmation-email', {
         body: {
           firstName: requestData.first_name,
           lastName: requestData.last_name,
@@ -68,8 +69,14 @@ const FormPT = () => {
       });
 
       if (emailError) {
-        console.error('Erreur email:', emailError);
-        // Ne pas empêcher le succès si l'email échoue
+        console.error('Erreur email complète:', emailError);
+        toast({
+          title: "Warnung",
+          description: "Bestätigungs-E-Mail konnte nicht gesendet werden. Ihre Anfrage wurde trotzdem gespeichert.",
+          variant: "destructive",
+        });
+      } else {
+        console.log('Email envoyé avec succès:', emailData);
       }
 
       toast({
