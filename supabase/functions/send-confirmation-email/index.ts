@@ -40,19 +40,19 @@ const handler = async (req: Request): Promise<Response> => {
       formDetails = `
         <h3>Détails Personal Training :</h3>
         <ul>
-          <li><strong>Objectifs :</strong> ${formData.goals || 'Non spécifié'}</li>
-          <li><strong>Background :</strong> ${formData.background || 'Non spécifié'}</li>
-          <li><strong>Routine d'activité :</strong> ${formData.activity_routine || 'Non spécifiée'}</li>
-          <li><strong>Référence :</strong> ${formData.reference || 'Non spécifiée'}</li>
+          <li><strong>Objectifs :</strong> ${formData?.goals || 'Non spécifié'}</li>
+          <li><strong>Background :</strong> ${formData?.background || 'Non spécifié'}</li>
+          <li><strong>Routine d'activité :</strong> ${formData?.activity_routine || 'Non spécifiée'}</li>
+          <li><strong>Référence :</strong> ${formData?.reference || 'Non spécifiée'}</li>
         </ul>
       `;
     } else {
       formDetails = `
         <h3>Détails Wellness Massage :</h3>
         <ul>
-          <li><strong>Douleurs/Blessures :</strong> ${formData.pain_injuries || 'Non spécifié'}</li>
-          <li><strong>Disponibilité :</strong> ${formData.availability || 'Non spécifiée'}</li>
-          <li><strong>Référence :</strong> ${formData.reference || 'Non spécifiée'}</li>
+          <li><strong>Douleurs/Blessures :</strong> ${formData?.pain_injuries || 'Non spécifié'}</li>
+          <li><strong>Disponibilité :</strong> ${formData?.availability || 'Non spécifiée'}</li>
+          <li><strong>Référence :</strong> ${formData?.reference || 'Non spécifiée'}</li>
         </ul>
       `;
     }
