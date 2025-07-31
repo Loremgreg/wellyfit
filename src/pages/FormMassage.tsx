@@ -56,26 +56,24 @@ const FormMassage = () => {
         throw new Error('Erreur lors de la sauvegarde des données');
       }
 
-      // Envoyer l'email de confirmation
-      console.log('Tentative d\'envoi d\'email de confirmation...');
-      const { data: emailData, error: emailError } = await supabase.functions.invoke('send-confirmation-email', {
+      // Envoyer une notification à Gregory
+      const { error: emailError } = await supabase.functions.invoke('send-confirmation-email', {
         body: {
           firstName: requestData.first_name,
           lastName: requestData.last_name,
           email: requestData.email,
-          type: 'wellness-massage'
+          phone: requestData.phone,
+          type: 'wellness-massage',
+          formData: {
+            pain_injuries: requestData.pain_injuries,
+            availability: requestData.availability_notes,
+            reference: `${requestData.reference_source}${requestData.reference_name ? ` (${requestData.reference_name})` : ''}`
+          }
         }
       });
 
       if (emailError) {
-        console.error('Erreur email complète:', emailError);
-        toast({
-          title: "Warnung",
-          description: "Bestätigungs-E-Mail konnte nicht gesendet werden. Ihre Anfrage wurde trotzdem gespeichert.",
-          variant: "destructive",
-        });
-      } else {
-        console.log('Email envoyé avec succès:', emailData);
+        console.error('Erreur notification:', emailError);
       }
 
       toast({

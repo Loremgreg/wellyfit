@@ -9,11 +9,13 @@ const corsHeaders = {
     "authorization, x-client-info, apikey, content-type",
 };
 
-interface EmailRequest {
+interface FormNotificationRequest {
   firstName: string;
   lastName: string;
   email: string;
+  phone?: string;
   type: 'personal-training' | 'wellness-massage';
+  formData: any;
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -23,46 +25,59 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { firstName, lastName, email, type }: EmailRequest = await req.json();
+    const { firstName, lastName, email, phone, type, formData }: FormNotificationRequest = await req.json();
 
     const isPersonalTraining = type === 'personal-training';
     const subject = isPersonalTraining 
-      ? "Bestätigung Ihrer Personal Training Anfrage" 
-      : "Bestätigung Ihrer Wellness Massage Anfrage";
+      ? "Nouvelle demande Personal Training" 
+      : "Nouvelle demande Wellness Massage";
 
     const serviceTitle = isPersonalTraining ? "Personal Training" : "Wellness Massage";
 
+    // Préparer le contenu spécifique selon le type de formulaire
+    let formDetails = '';
+    if (isPersonalTraining) {
+      formDetails = `
+        <h3>Détails Personal Training :</h3>
+        <ul>
+          <li><strong>Objectifs :</strong> ${formData.goals || 'Non spécifié'}</li>
+          <li><strong>Background :</strong> ${formData.background || 'Non spécifié'}</li>
+          <li><strong>Routine d'activité :</strong> ${formData.activity_routine || 'Non spécifiée'}</li>
+          <li><strong>Référence :</strong> ${formData.reference || 'Non spécifiée'}</li>
+        </ul>
+      `;
+    } else {
+      formDetails = `
+        <h3>Détails Wellness Massage :</h3>
+        <ul>
+          <li><strong>Douleurs/Blessures :</strong> ${formData.pain_injuries || 'Non spécifié'}</li>
+          <li><strong>Disponibilité :</strong> ${formData.availability || 'Non spécifiée'}</li>
+          <li><strong>Référence :</strong> ${formData.reference || 'Non spécifiée'}</li>
+        </ul>
+      `;
+    }
+
     const emailResponse = await resend.emails.send({
-      from: "Personal Training & Wellness <onboarding@resend.dev>",
-      to: [email],
+      from: "Gregory Bast Notifications <onboarding@resend.dev>",
+      to: ["gregory.fitwell@gmail.com"],
       subject,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
-          <h1 style="color: #2563eb; margin-bottom: 20px;">Vielen Dank für Ihre Anfrage!</h1>
-          
-          <p>Liebe/r ${firstName} ${lastName},</p>
-          
-          <p>vielen Dank für Ihr Interesse an unserem <strong>${serviceTitle}</strong> Service. Wir haben Ihre Anfrage erhalten und werden uns in Kürze bei Ihnen melden.</p>
+          <h1 style="color: #2563eb; margin-bottom: 20px;">Nouvelle demande ${serviceTitle}</h1>
           
           <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #1e40af; margin-top: 0;">Was passiert als nächstes?</h3>
-            <ul style="margin: 10px 0; padding-left: 20px;">
-              <li>Wir prüfen Ihre Anfrage sorgfältig</li>
-              <li>Sie erhalten innerhalb von 24 Stunden eine persönliche Antwort</li>
-              <li>Gemeinsam planen wir Ihren individuellen ${serviceTitle} Termin</li>
+            <h3>Informations client :</h3>
+            <ul>
+              <li><strong>Nom :</strong> ${firstName} ${lastName}</li>
+              <li><strong>Email :</strong> ${email}</li>
+              <li><strong>Téléphone :</strong> ${phone || 'Non fourni'}</li>
             </ul>
+            
+            ${formDetails}
           </div>
           
-          <p>Bei Fragen können Sie uns jederzeit kontaktieren.</p>
-          
-          <p style="margin-top: 30px;">
-            Mit freundlichen Grüßen,<br>
-            <strong>Ihr Personal Training & Wellness Team</strong>
-          </p>
-          
-          <hr style="margin: 30px 0; border: none; border-top: 1px solid #e5e7eb;">
           <p style="font-size: 12px; color: #6b7280;">
-            Diese E-Mail wurde automatisch generiert. Bitte antworten Sie nicht direkt auf diese E-Mail.
+            Email généré automatiquement depuis le formulaire ${serviceTitle}.
           </p>
         </div>
       `,
