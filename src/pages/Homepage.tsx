@@ -19,9 +19,12 @@ const Homepage = () => {
         ></div>
         <div className="relative container-custom section-padding">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 leading-tight">
-              Ihr Weg zu mehr Kraft und Wohlbefinden beginnt hier.
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-3 leading-tight">
+              Personal Training & Wellness-Massage in Murnau am Staffelsee
             </h1>
+            <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-8 leading-snug">
+              Ihr Weg zu mehr Kraft und Wohlbefinden
+            </h2>
             <p className="text-xl md:text-2xl mb-12 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
               Personal Training & Wellness-Massage – individuell, professionell und bei Ihnen zu Hause.
             </p>
@@ -42,7 +45,7 @@ const Homepage = () => {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-primary">
-              Meine Angebote
+              Unsere Angebote für Personal Training und Wellness-Massage in Murnau am Staffelsee
             </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Professionelle Betreuung für Ihre Gesundheit und Ihr Wohlbefinden
@@ -56,7 +59,7 @@ const Homepage = () => {
                 style={{ backgroundImage: `url(${personalTrainingImage})` }}>
               </div>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
-                Personal Training
+                Personal Training – maßgeschneidertes Training zu Hause
               </h3>
               <p className="text-lg mb-6 text-muted-foreground">
                 Individuell abgestimmtes Training, das Ihre Ziele in greifbare Nähe rückt.
@@ -90,7 +93,7 @@ const Homepage = () => {
                 style={{ backgroundImage: `url(${wellnessMassageImage})` }}>
               </div>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
-                Wellness-Massage
+                Wellness-Massage zu Hause – Entspannung für Körper und Geist
               </h3>
               <p className="text-lg mb-6 text-muted-foreground">
                 Wellness und Entspannung, maßgeschneidert für Ihren Körper und Geist.
