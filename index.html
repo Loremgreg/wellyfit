@@ -19,6 +19,179 @@
   <meta name="twitter:title" content="Personal Training & Massage in Murnau | Gregory Bast" />
   <meta name="twitter:description" content="Personal Training und Massagen in Murnau am Staffelsee." />
   <meta name="twitter:image" content="https://gregorybast.com/og-image.jpg" /> <!-- Vous devrez créer cette image -->
+
+  <!-- Schema.org JSON-LD Markup for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://gregorybast.com/#business",
+        "name": "Gregory Bast - Personal Training & Massage",
+        "alternateName": "bast. Personal Training & Massage",
+        "description": "Personal Training und mobile Massagen in Murnau am Staffelsee – maßgeschneiderte Fitness- und Wellness-Behandlungen direkt bei Ihnen vor Ort.",
+        "url": "https://gregorybast.com",
+        "telephone": "+49-XXX-XXXXXXX",
+        "email": "contact@gregorybast.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Murnau am Staffelsee",
+          "addressRegion": "Bayern",
+          "addressCountry": "DE"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "47.6808",
+          "longitude": "11.2003"
+        },
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "47.6808",
+            "longitude": "11.2003"
+          },
+          "geoRadius": "25000"
+        },
+        "serviceType": ["Personal Training", "Wellness Massage", "Mobile Fitness Services"],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Fitness und Wellness Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://gregorybast.com/#personal-training",
+                "name": "Personal Training",
+                "description": "Maßgeschneidertes Personal Training zu Hause mit professioneller Betreuung durch einen Physiotherapeuten."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "@id": "https://gregorybast.com/#wellness-massage",
+                "name": "Wellness Massage",
+                "description": "Mobile Wellness-Massagen für Entspannung und Regeneration direkt bei Ihnen zu Hause."
+              }
+            }
+          ]
+        },
+        "employee": {
+          "@id": "https://gregorybast.com/#person"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://gregorybast.com/#person",
+        "name": "Gregory Bast",
+        "givenName": "Gregory",
+        "familyName": "Bast",
+        "jobTitle": "Physiotherapeut & Personal Trainer",
+        "description": "Qualifizierter Physiotherapeut und Personal Trainer aus Belgien mit Expertise in maßgeschneidertem Training und Wellness-Behandlungen.",
+        "knowsAbout": ["Physiotherapie", "Personal Training", "Wellness Massage", "Fitness", "Rehabilitation"],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Bachelor in Physiotherapie",
+            "credentialCategory": "degree",
+            "educationalLevel": "Bachelor"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "Personal Trainer Zertifikat",
+            "credentialCategory": "certificate"
+          }
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Belgische Hochschule für Physiotherapie",
+          "addressCountry": "BE"
+        },
+        "workLocation": {
+          "@type": "Place",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Murnau am Staffelsee",
+            "addressRegion": "Bayern",
+            "addressCountry": "DE"
+          }
+        },
+        "worksFor": {
+          "@id": "https://gregorybast.com/#business"
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://gregorybast.com/#personal-training",
+        "name": "Personal Training zu Hause",
+        "description": "Professionelles Personal Training in den eigenen vier Wänden. Maßgeschneiderte Trainingsprogramme für alle Fitnesslevel mit medizinischer Expertise.",
+        "provider": {
+          "@id": "https://gregorybast.com/#business"
+        },
+        "serviceType": "Personal Training",
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "47.6808",
+            "longitude": "11.2003"
+          },
+          "geoRadius": "25000"
+        },
+        "serviceOutput": "Verbesserte Fitness, Kraft und Gesundheit",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": ["Fitness-Anfänger", "Senioren", "Personen nach Verletzungen", "Berufstätige"]
+        }
+      },
+      {
+        "@type": "Service",
+        "@id": "https://gregorybast.com/#wellness-massage",
+        "name": "Wellness Massage zu Hause",
+        "description": "Mobile Wellness-Massagen für tiefe Entspannung und Regeneration. Professionelle Massagetherapie in der vertrauten Umgebung Ihres Zuhauses.",
+        "provider": {
+          "@id": "https://gregorybast.com/#business"
+        },
+        "serviceType": "Wellness Massage",
+        "areaServed": {
+          "@type": "GeoCircle",
+          "geoMidpoint": {
+            "@type": "GeoCoordinates",
+            "latitude": "47.6808",
+            "longitude": "11.2003"
+          },
+          "geoRadius": "25000"
+        },
+        "serviceOutput": "Entspannung, Stressabbau und körperliches Wohlbefinden",
+        "audience": {
+          "@type": "Audience",
+          "audienceType": ["Gestresste Personen", "Sportler", "Berufstätige", "Personen mit Verspannungen"]
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://gregorybast.com/#website",
+        "url": "https://gregorybast.com",
+        "name": "Gregory Bast - Personal Training & Massage",
+        "description": "Personal Training und mobile Massagen in Murnau am Staffelsee",
+        "publisher": {
+          "@id": "https://gregorybast.com/#business"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://gregorybast.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
