@@ -59,7 +59,7 @@ const Homepage = () => {
                 style={{ backgroundImage: `url(${personalTrainingImage})` }}>
               </div>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
-                Personal Training – maßgeschneidertes Training zu Hause
+                Personal Training zu Hause
               </h3>
               <p className="text-lg mb-6 text-muted-foreground">
                 Individuell abgestimmtes Training, das Ihre Ziele in greifbare Nähe rückt.
@@ -93,11 +93,9 @@ const Homepage = () => {
                 style={{ backgroundImage: `url(${wellnessMassageImage})` }}>
               </div>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
-                Wellness-Massage zu Hause – Entspannung für Körper und Geist
+                Wellness-Massage zu Hause
               </h3>
-              <p className="text-lg mb-6 text-muted-foreground">
-                Wellness und Entspannung, maßgeschneidert für Ihren Körper und Geist.
-              </p>
+              <p className="text-lg mb-6 text-muted-foreground">Entspannung für Körper und Geist.</p>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-start gap-3">
                   <Heart className="text-accent mt-1 flex-shrink-0" size={20} />
