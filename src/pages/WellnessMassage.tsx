@@ -21,7 +21,7 @@ const WellnessMassage = () => {
               Als in Belgien ausgebildeter Physiotherapeut bringe ich ein fundiertes Wissen über die Anatomie und Funktionsweise des Körpers mit. Das ermöglicht es mir, Druck, Bewegungen und Rhythmus an Ihren Körperbau und Ihre Empfindlichkeit anzupassen und so eine maßgeschneiderte Massage anzubieten.
             </p>
             <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-              <Link to="/form-massage">WELLNESS-MASSAGE BUCHEN</Link>
+              <Link to="/anfrage-massage">WELLNESS-MASSAGE BUCHEN</Link>
             </Button>
           </div>
         </div>
@@ -137,7 +137,7 @@ const WellnessMassage = () => {
               Buchen Sie jetzt Ihre individuelle Wellness-Massage bei Ihnen zu Hause und erleben Sie tiefe Entspannung und Regeneration.
             </p>
             <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-              <Link to="/form-massage">WELLNESS-MASSAGE BUCHEN</Link>
+              <Link to="/anfrage-massage">WELLNESS-MASSAGE BUCHEN</Link>
             </Button>
           </div>
         </div>

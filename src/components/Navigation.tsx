@@ -8,9 +8,9 @@ const Navigation = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: "Personal Training", href: "/personal-training" },
-    { name: "Wellness-Massage", href: "/wellness-massage" },
-    { name: "Über mich", href: "/uber-mich" },
+    { name: "Personal Training", href: "/personal-training-murnau" },
+    { name: "Wellness-Massage", href: "/massage-murnau" },
+    { name: "Über mich", href: "/personal-trainer-murnau" },
   ];
 
   const isActive = (href: string) => location.pathname === href;

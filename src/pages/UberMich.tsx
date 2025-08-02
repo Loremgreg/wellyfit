@@ -139,10 +139,10 @@ const UberMich = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-              <Link to="/form-pt">MIT MIR TRAINIEREN</Link>
+              <Link to="/anfrage-personal-training">MIT MIR TRAINIEREN</Link>
             </Button>
             <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-              <Link to="/form-massage">WELLNESS-MASSAGE BUCHEN</Link>
+              <Link to="/anfrage-massage">WELLNESS-MASSAGE BUCHEN</Link>
             </Button>
           </div>
         </div>

@@ -30,14 +30,13 @@ const App = () => (
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<Homepage />} />
-              <Route path="/personal-training" element={<PersonalTraining />} />
-              <Route path="/wellness-massage" element={<WellnessMassage />} />
-              <Route path="/uber-mich" element={<UberMich />} />
-              <Route path="/form-pt" element={<FormPT />} />
-              <Route path="/form-massage" element={<FormMassage />} />
+              <Route path="/personal-training-murnau" element={<PersonalTraining />} />
+              <Route path="/massage-murnau" element={<WellnessMassage />} />
+              <Route path="/anfrage-personal-training" element={<FormPT />} />
+              <Route path="/anfrage-massage" element={<FormMassage />} />
+              <Route path="/personal-trainer-murnau" element={<UberMich />} />
               <Route path="/impressum" element={<Impressum />} />
               <Route path="/datenschutz" element={<Datenschutz />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </main>

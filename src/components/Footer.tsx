@@ -20,7 +20,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/personal-training"
+                  to="/personal-training-murnau"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Personal Training
@@ -28,7 +28,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/wellness-massage"
+                  to="/massage-murnau"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Wellness-Massage
@@ -36,7 +36,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/uber-mich"
+                  to="/personal-trainer-murnau"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Über mich

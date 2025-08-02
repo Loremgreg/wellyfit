@@ -18,7 +18,7 @@ const PersonalTraining = () => {
               Erleben Sie neue Kraft, Mobilität und Wohlbefinden – mit maßgeschneidertem Coaching, das perfekt auf Ihr Niveau und Ihre Ziele abgestimmt ist.
             </p>
             <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-              <Link to="/form-pt">MIT MIR TRAINIEREN</Link>
+              <Link to="/anfrage-personal-training">MIT MIR TRAINIEREN</Link>
             </Button>
           </div>
         </div>
@@ -145,7 +145,7 @@ const PersonalTraining = () => {
 
             <div className="text-center mt-12">
               <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-                <Link to="/form-pt">MIT MIR TRAINIEREN</Link>
+                <Link to="/anfrage-personal-training">MIT MIR TRAINIEREN</Link>
               </Button>
             </div>
           </div>

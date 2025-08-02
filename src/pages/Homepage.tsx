@@ -30,10 +30,10 @@ const Homepage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-                <Link to="/personal-training">Personal Training</Link>
+                <Link to="/personal-training-murnau">Personal Training</Link>
               </Button>
               <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
-                <Link to="/wellness-massage">Wellness-Massage</Link>
+                <Link to="/massage-murnau">Wellness-Massage</Link>
               </Button>
             </div>
           </div>
@@ -83,7 +83,7 @@ const Homepage = () => {
                 </li>
               </ul>
               <Button asChild variant="accent" size="lg" className="w-full">
-                <Link to="/form-pt">MIT MIR TRAINIEREN</Link>
+                <Link to="/anfrage-personal-training">MIT MIR TRAINIEREN</Link>
               </Button>
             </Card>
 
@@ -121,7 +121,7 @@ const Homepage = () => {
                 </li>
               </ul>
               <Button asChild variant="accent" size="lg" className="w-full">
-                <Link to="/form-massage">WELLNESS-MASSAGE BUCHEN</Link>
+                <Link to="/anfrage-massage">WELLNESS-MASSAGE BUCHEN</Link>
               </Button>
             </Card>
           </div>
@@ -140,7 +140,7 @@ const Homepage = () => {
                 Als in Belgien ausgebildeter Physiotherapeut und Personal Trainer begleite ich Sie professionell und individuell auf Ihrem Weg zu einem gesunden und aktiven Leben. Profitieren Sie von meinem ganzheitlichen Ansatz, der Ihr Wohlbefinden in den Mittelpunkt stellt.
               </p>
               <Button asChild variant="accent" size="lg" className="w-full">
-                <Link to="/uber-mich">MEHR ERFAHREN</Link>
+                <Link to="/personal-trainer-murnau">MEHR ERFAHREN</Link>
               </Button>
             </div>
             <div className="order-first lg:order-last">
