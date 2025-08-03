@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { GraduationCap, Award, MapPin, Heart } from "lucide-react";
+import { GraduationCap, Award, MapPin, PersonStanding, Leaf } from "lucide-react";
 import trainerPortrait from "@/assets/trainer-portrait.jpg";
 const UberMich = () => {
   return <div className="min-h-screen">
@@ -40,7 +40,7 @@ const UberMich = () => {
             <Card className="card-elegant">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Heart className="text-accent" size={24} />
+                  <PersonStanding className="text-accent" size={24} />
                 </div>
                 <h3 className="text-xl font-semibold">Personal Training</h3>
               </div>
@@ -52,7 +52,7 @@ const UberMich = () => {
             <Card className="card-elegant">
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center">
-                  <Heart className="text-accent" size={24} />
+                  <Leaf className="text-accent" size={24} />
                 </div>
                 <h3 className="text-xl font-semibold">Wellness‑Massagen</h3>
               </div>
