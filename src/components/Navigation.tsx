@@ -22,12 +22,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#EB8160]">
             {/* Combined logo button */}
-            <div className="rounded-lg bg-[#EB8160] px-4 py-2 flex flex-col">
+            <div className="w-16 h-16 rounded-full bg-[#EB8160] flex items-center justify-center">
               <span className="text-2xl font-heading font-bold text-[#E4E2DD]">
                 bast.
-              </span>
-              <span className="text-[10px] font-semibold text-[#E4E2DD] -mt-1 ml-2">
-                Personal Training & Massage
               </span>
             </div>
           </Link>
