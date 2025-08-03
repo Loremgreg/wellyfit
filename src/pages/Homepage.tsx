@@ -4,7 +4,7 @@ import { Card } from "@/components/ui/card";
 import { CheckCircle, Target, Heart } from "lucide-react";
 import personalTrainingImage from "@/assets/personal-training.jpg";
 import wellnessMassageImage from "@/assets/wellness-massage.jpg";
-// import trainerPortrait from "@/assets/trainer-portrait.jpg";
+import trainerPortrait from "@/assets/trainer-portrait.jpg";
 
 const Homepage = () => {
   return (
@@ -135,7 +135,7 @@ const Homepage = () => {
                 <Link to="/personal-trainer-murnau">MEHR ERFAHREN</Link>
               </Button>
             </div>
-            {/* <div className="order-first lg:order-last">
+            <div className="order-first lg:order-last">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={trainerPortrait}
@@ -143,7 +143,7 @@ const Homepage = () => {
                   className="w-full h-auto object-cover"
                 />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
