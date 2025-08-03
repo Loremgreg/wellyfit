@@ -17,7 +17,7 @@ const UberMich = () => {
               Personal Trainier & Wellness‑Massage bei Ihnen zu Hause – in Murnau am Staffelsee & Umgebung
             </h2>
             <p className="text-lg mb-8 leading-relaxed">
-              Bonjour! Ich bin Grégory – Personal Trainer mit Ausbildung in der Physiotherapie. Bewegung ist für mich Lebensqualität. Ich liebe es, Menschen jeden Alters dabei zu unterstützen, sich kräftiger und beweglicher zu fühlen.
+              Bonjour! Ich bin Gregory – Personal Trainer mit Ausbildung in der Physiotherapie. Bewegung ist für mich Lebensqualität. Ich liebe es, Menschen jeden Alters dabei zu unterstützen, sich kräftiger und beweglicher zu fühlen.
             </p>
           </div>
           <div className="max-w-md mx-auto">
