@@ -20,6 +20,20 @@
   <meta name="twitter:description" content="Personal Training und Massagen in Murnau am Staffelsee." />
   <meta name="twitter:image" content="https://gregorybast.com/og-image.jpg" /> <!-- Vous devrez créer cette image -->
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LF05WPP5G2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Check cookie consent before initializing
+    const consent = localStorage.getItem('cookie_consent');
+    if (consent === 'true') {
+      gtag('config', 'G-LF05WPP5G2');
+    }
+  </script>
+
   <!-- Schema.org JSON-LD Markup for SEO -->
   <script type="application/ld+json">
   {

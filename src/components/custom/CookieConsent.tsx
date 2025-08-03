@@ -4,6 +4,13 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
+// Declare gtag function type
+declare global {
+  interface Window {
+    gtag: (command: string, targetId: string, config?: any) => void;
+  }
+}
+
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -17,11 +24,24 @@ const CookieConsent = () => {
   const handleAccept = () => {
     localStorage.setItem("cookie_consent", "true");
     setIsVisible(false);
+    
+    // Initialize Google Analytics after consent
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-LF05WPP5G2');
+    }
   };
 
   const handleDecline = () => {
     localStorage.setItem("cookie_consent", "false");
     setIsVisible(false);
+    
+    // Disable Google Analytics tracking
+    if (typeof window.gtag === 'function') {
+      window.gtag('config', 'G-LF05WPP5G2', {
+        'anonymize_ip': true,
+        'send_page_view': false
+      });
+    }
   };
 
   if (!isVisible) {
