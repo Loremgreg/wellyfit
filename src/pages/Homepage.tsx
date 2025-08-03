@@ -2,22 +2,16 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Target, Heart } from "lucide-react";
-import heroImage from "@/assets/hero-image.jpg";
 import personalTrainingImage from "@/assets/personal-training.jpg";
 import wellnessMassageImage from "@/assets/wellness-massage.jpg";
-import trainerPortrait from "@/assets/trainer-portrait.jpg";
+// import trainerPortrait from "@/assets/trainer-portrait.jpg";
 
 const Homepage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary to-primary-dark text-primary-foreground">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        ></div>
-        <div className="relative container-custom section-padding">
+      <section className="section-padding bg-gradient-to-br from-primary to-primary-dark text-primary-foreground">
+        <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-3 leading-tight">
               Personal Training & Wellness-Massage in Murnau am Staffelsee
@@ -141,15 +135,15 @@ const Homepage = () => {
                 <Link to="/personal-trainer-murnau">MEHR ERFAHREN</Link>
               </Button>
             </div>
-            <div className="order-first lg:order-last">
+            {/* <div className="order-first lg:order-last">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={trainerPortrait}
-                  alt="Grégory - Personal Trainer und Physiotherapeut"
+                  alt="Personal Trainer Murnau"
                   className="w-full h-auto object-cover"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
