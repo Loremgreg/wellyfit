@@ -262,7 +262,7 @@ const FormMassage = () => {
           <div className="space-y-6">
             {/* Image */}
             <Card className="overflow-hidden">
-              <img src={wellnessMassageImage} alt="Wellness Massage" className="w-full h-48 object-cover" />
+              <img src={wellnessMassageImage} alt="Massage Murnau Preise" className="w-full h-48 object-cover" />
             </Card>
 
             {/* Pricing */}
