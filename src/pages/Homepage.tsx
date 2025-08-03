@@ -135,7 +135,7 @@ const Homepage = () => {
                 <Link to="/personal-trainer-murnau">MEHR ERFAHREN</Link>
               </Button>
             </div>
-            <div className="order-first lg:order-last">
+            <div className="order-first lg:order-last max-w-md mx-auto">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
                   src={trainerPortrait}

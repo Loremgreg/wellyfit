@@ -20,7 +20,7 @@ const UberMich = () => {
               Bonjour! Ich bin Grégory – Personal Trainer mit Ausbildung in der Physiotherapie. Bewegung ist für mich Lebensqualität. Ich liebe es, Menschen jeden Alters dabei zu unterstützen, sich kräftiger und beweglicher zu fühlen.
             </p>
           </div>
-          <div>
+          <div className="max-w-md mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img src={trainerPortrait} alt="Grégory - Personal Trainer und Physiotherapeut" className="w-full h-auto object-cover" />
             </div>
