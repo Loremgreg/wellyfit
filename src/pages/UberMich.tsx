@@ -14,7 +14,7 @@ const UberMich = () => {
               Über mich
             </h1>
             <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-8 text-muted-foreground">
-              Personal Training & Wellness‑Massagen bei Ihnen zu Hause – in Murnau am Staffelsee & Umgebung
+              Personal Trainier & Wellness‑Massage bei Ihnen zu Hause – in Murnau am Staffelsee & Umgebung
             </h2>
             <p className="text-lg mb-8 leading-relaxed">
               Bonjour! Ich bin Grégory – Personal Trainer mit Ausbildung in der Physiotherapie. Bewegung ist für mich Lebensqualität. Ich liebe es, Menschen jeden Alters dabei zu unterstützen, sich kräftiger und beweglicher zu fühlen.
@@ -22,7 +22,7 @@ const UberMich = () => {
           </div>
           <div className="max-w-md mx-auto">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src={trainerPortrait} alt="Grégory - Personal Trainer und Physiotherapeut" className="w-full h-auto object-cover" />
+              <img src={trainerPortrait} alt="Personal Trainer Murnau" className="w-full h-auto object-cover" />
             </div>
           </div>
         </div>
