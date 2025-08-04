@@ -1,7 +1,14 @@
+# Force HTTPS and canonical domain (gregorybast.com without www)
+http://gregorybast.com/* https://gregorybast.com/:splat 301!
+http://www.gregorybast.com/* https://gregorybast.com/:splat 301!
+https://www.gregorybast.com/* https://gregorybast.com/:splat 301!
+
+# Page redirections
 /personal-training /personal-training-murnau 301
 /wellness-massage /massage-murnau 301
 /form-pt /anfrage-personal-training 301
 /form-massage /anfrage-massage 301
 /uber-mich /personal-trainer-murnau 301
 
+# SPA fallback
 /* /index.html 200
