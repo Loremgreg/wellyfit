@@ -331,29 +331,11 @@ const FormMassage = () => {
                 <div>
                   <h4 className="font-semibold mb-3 text-primary">Rücken Massage:</h4>
                   <div>
-                    <div className="font-medium text-sm mb-2">45 Minuten:</div>
+                    <div className="font-medium text-sm mb-2">30 Minuten:</div>
                     <div className="ml-4 space-y-1 text-sm">
                       <div className="flex items-baseline justify-between gap-2">
                         <span>Einzelsitzung</span>
-                        <span className="font-semibold whitespace-nowrap">67,5 €</span>
-                      </div>
-                      <div className="flex items-baseline justify-between gap-2">
-                        <span>12er‑Karte</span>
-                        <span className="font-semibold whitespace-nowrap">
-                          64,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 774 €)</span>
-                        </span>
-                      </div>
-                      <div className="flex items-baseline justify-between gap-2">
-                        <span>24er‑Karte</span>
-                        <span className="font-semibold whitespace-nowrap">
-                          61,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 1.476 €)</span>
-                        </span>
-                      </div>
-                      <div className="flex items-baseline justify-between gap-2">
-                        <span>48er‑Karte</span>
-                        <span className="font-semibold whitespace-nowrap">
-                          58,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 2.808 €)</span>
-                        </span>
+                        <span className="font-semibold whitespace-nowrap">49 €</span>
                       </div>
                     </div>
                   </div>
