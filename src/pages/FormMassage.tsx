@@ -277,7 +277,7 @@ const FormMassage = () => {
                       <div className="ml-4 space-y-1 text-sm">
                         <div className="flex items-baseline justify-between gap-2">
                           <span>Einzelsitzung</span>
-                          <span className="font-semibold whitespace-nowrap">90 €</span>
+                          <span className="font-semibold whitespace-nowrap">89 €</span>
                         </div>
                         <div className="flex items-baseline justify-between gap-2">
                           <span>12er‑Karte</span>
@@ -304,24 +304,24 @@ const FormMassage = () => {
                       <div className="ml-4 space-y-1 text-sm">
                         <div className="flex items-baseline justify-between gap-2">
                           <span>Einzelsitzung</span>
-                          <span className="font-semibold whitespace-nowrap">67,5 €</span>
+                          <span className="font-semibold whitespace-nowrap">69 €</span>
                         </div>
                         <div className="flex items-baseline justify-between gap-2">
                           <span>12er‑Karte</span>
                           <span className="font-semibold whitespace-nowrap">
-                            64,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 774 €)</span>
+                            64 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 768 €)</span>
                           </span>
                         </div>
                         <div className="flex items-baseline justify-between gap-2">
                           <span>24er‑Karte</span>
                           <span className="font-semibold whitespace-nowrap">
-                            61,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 1.476 €)</span>
+                            61 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 1.464 €)</span>
                           </span>
                         </div>
                         <div className="flex items-baseline justify-between gap-2">
                           <span>48er‑Karte</span>
                           <span className="font-semibold whitespace-nowrap">
-                            58,5 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 2.808 €)</span>
+                            58 € <span className="text-xs font-normal text-muted-foreground">(Gesamt 2.784 €)</span>
                           </span>
                         </div>
                       </div>
