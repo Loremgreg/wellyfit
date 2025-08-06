@@ -158,7 +158,7 @@ const FormPT = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor="city">Stadt</Label>
+                        <Label htmlFor="city">Stadt *</Label>
                         <Input id="city" name="city" required />
                       </div>
                     </div>
