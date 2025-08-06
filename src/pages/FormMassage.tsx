@@ -173,14 +173,14 @@ const FormMassage = () => {
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="city">Stadt</Label>
-                      <Input id="city" name="city" placeholder="z. B. Murnau" />
+                      <Label htmlFor="city">Stadt *</Label>
+                      <Input id="city" name="city" placeholder="z. B. Murnau" required />
                     </div>
                   </div>
 
                   <div>
-                    <Label htmlFor="phone">Telefon</Label>
-                    <Input id="phone" name="phone" type="tel" placeholder="+49…" />
+                    <Label htmlFor="phone">Telefon *</Label>
+                    <Input id="phone" name="phone" type="tel" placeholder="+49…" required />
                   </div>
                 </div>
 

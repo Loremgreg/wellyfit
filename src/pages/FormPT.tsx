@@ -164,8 +164,8 @@ const FormPT = () => {
                     </div>
 
                     <div>
-                      <Label htmlFor="phone">Telefon</Label>
-                      <Input id="phone" name="phone" type="tel" placeholder="+49…" />
+                      <Label htmlFor="phone">Telefon *</Label>
+                      <Input id="phone" name="phone" type="tel" placeholder="+49…" required />
                     </div>
                   </div>
 
@@ -204,13 +204,12 @@ const FormPT = () => {
                     </div>
 
                     <div>
-                      <Label htmlFor="pain">Haben Sie derzeit Schmerzen oder Verletzungen? *</Label>
+                      <Label htmlFor="pain">Haben Sie derzeit Schmerzen oder Verletzungen?</Label>
                       <Textarea
                         id="pain"
                         name="pain"
                         placeholder="Ja/Nein. Falls ja: bitte Details (Ort, Art, seit wann, Einschränkungen)."
                         rows={3}
-                        required
                       />
                     </div>
                   </div>
