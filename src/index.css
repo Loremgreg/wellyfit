@@ -190,9 +190,3 @@ All colors MUST be HSL for proper theming.
     @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
   }
 }
-
-@layer utilities {
-  .hover-scale {
-    @apply transition-transform duration-200 hover:scale-105;
-  }
-}
