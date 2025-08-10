@@ -10,23 +10,39 @@ const Homepage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-br from-primary to-primary-dark text-primary-foreground">
+      <section className="section-padding relative overflow-hidden bg-gradient-to-br from-primary to-primary-dark text-primary-foreground">
+        {/* Decorative animated blobs */}
+        <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-accent/20 blur-3xl animate-scale-in" />
+        <div aria-hidden className="pointer-events-none absolute -bottom-24 -left-24 h-80 w-80 rounded-full bg-primary-foreground/10 blur-3xl animate-fade-in" />
+
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-3 leading-tight">
+            <h1
+              className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-3 leading-tight animate-fade-in"
+              style={{ animationDelay: "0.05s" }}
+            >
               Personal Training & Wellness-Massage in Murnau am Staffelsee
             </h1>
-            <h2 className="text-2xl md:text-3xl font-heading font-semibold mb-8 leading-snug">
+            <h2
+              className="text-2xl md:text-3xl font-heading font-semibold mb-8 leading-snug animate-fade-in"
+              style={{ animationDelay: "0.15s" }}
+            >
               Ihr Weg zu mehr Kraft und Wohlbefinden
             </h2>
-            <p className="text-xl md:text-2xl mb-12 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
+            <p
+              className="text-xl md:text-2xl mb-12 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed animate-fade-in"
+              style={{ animationDelay: "0.25s" }}
+            >
               Personal Training & Wellness-Massage – individuell, professionell und bei Ihnen zu Hause.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
+            <div
+              className="flex flex-col sm:flex-row gap-4 justify-center animate-enter"
+              style={{ animationDelay: "0.35s" }}
+            >
+              <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6 hover-scale">
                 <Link to="/personal-training-murnau">Personal Training</Link>
               </Button>
-              <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6">
+              <Button asChild variant="accent" size="lg" className="text-lg px-10 py-6 hover-scale">
                 <Link to="/massage-murnau">Wellness-Massage</Link>
               </Button>
             </div>
