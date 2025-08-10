@@ -49,7 +49,7 @@ const Homepage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Personal Training */}
             <Card className="card-elegant overflow-hidden">
-              <div className="h-64 bg-cover bg-center mb-6 rounded-lg"
+              <div className="h-64 bg-contain bg-center bg-no-repeat mb-6 rounded-lg"
                 style={{ backgroundImage: `url(${personalTrainingImage})` }}>
               </div>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
