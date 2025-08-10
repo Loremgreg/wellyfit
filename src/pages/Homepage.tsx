@@ -49,9 +49,11 @@ const Homepage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Personal Training */}
             <Card className="card-elegant overflow-hidden">
-              <div className="h-64 bg-cover bg-center mb-6 rounded-lg"
-                style={{ backgroundImage: `url(${personalTrainingImage})` }}>
-              </div>
+              <img
+                src={personalTrainingImage}
+                alt="Personal Training zu Hause in Murnau"
+                className="h-64 w-full object-cover object-center mb-6 rounded-lg"
+              />
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
                 Personal Training zu Hause
               </h3>
@@ -83,9 +85,11 @@ const Homepage = () => {
 
             {/* Wellness Massage */}
             <Card className="card-elegant overflow-hidden">
-              <div className="h-64 bg-cover bg-center mb-6 rounded-lg"
-                style={{ backgroundImage: `url(${wellnessMassageImage})` }}>
-              </div>
+              <img
+                src={wellnessMassageImage}
+                alt="Massage in Murnau"
+                className="h-64 w-full object-cover object-center mb-6 rounded-lg"
+              />
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
                 Wellness-Massage zu Hause
               </h3>
