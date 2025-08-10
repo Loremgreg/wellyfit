@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { CheckCircle, Target, Heart } from "lucide-react";
 import personalTrainingImage from "@/assets/personal-training.jpg";
 import wellnessMassageImage from "@/assets/wellness-massage.jpg";
@@ -49,9 +50,14 @@ const Homepage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Personal Training */}
             <Card className="card-elegant overflow-hidden">
-              <div className="h-80 bg-cover bg-top mb-6 rounded-lg"
-                style={{ backgroundImage: `url(${personalTrainingImage})` }}>
-              </div>
+              <AspectRatio ratio={16 / 9} className="mb-6 rounded-lg overflow-hidden bg-muted">
+                <img
+                  src={personalTrainingImage}
+                  alt="Personal Training Murnau – ganze Körperansicht"
+                  className="w-full h-full object-contain"
+                  loading="lazy"
+                />
+              </AspectRatio>
               <h3 className="text-3xl font-heading font-bold mb-4 text-primary">
                 Personal Training zu Hause
               </h3>
