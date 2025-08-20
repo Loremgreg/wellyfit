@@ -6,10 +6,13 @@ interface RecaptchaProps {
 }
 
 const Recaptcha = forwardRef<ReCAPTCHA, RecaptchaProps>(({ onChange }, ref) => {
+  const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+  console.log("reCAPTCHA siteKey:", siteKey);
+  
   return (
     <ReCAPTCHA
       ref={ref}
-      sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+      sitekey={siteKey}
       onChange={onChange}
     />
   );
