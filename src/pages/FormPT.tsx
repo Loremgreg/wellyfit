@@ -203,15 +203,6 @@ const FormPT = () => {
                       />
                     </div>
 
-                    <div>
-                      <Label htmlFor="pain">Haben Sie derzeit Schmerzen oder Verletzungen?</Label>
-                      <Textarea
-                        id="pain"
-                        name="pain"
-                        placeholder="Ja/Nein. Falls ja: bitte Details (Ort, Art, seit wann, Einschränkungen)."
-                        rows={3}
-                      />
-                    </div>
                   </div>
 
                   {/* Reference */}

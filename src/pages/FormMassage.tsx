@@ -184,18 +184,6 @@ const FormMassage = () => {
                   </div>
                 </div>
 
-                {/* Preferences */}
-                <div className="space-y-4">
-
-
-
-
-                  <div>
-                    <Label htmlFor="pain">Haben Sie derzeit Beschwerden oder Verletzungen?</Label>
-                    <Textarea id="pain" name="pain" placeholder="Ja/Nein. Falls ja: bitte Details (Ort, Art, seit wann, Einschränkungen)." rows={3} />
-                  </div>
-                </div>
-
                 {/* Availability */}
                 <div className="space-y-4">
                   <h3 className="text-lg font-semibold text-primary">Ihre Verfügbarkeiten</h3>
