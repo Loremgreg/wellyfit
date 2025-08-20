@@ -42,7 +42,7 @@ const FormPT = () => {
         background: formData.get('background') as string || null,
         goals: formData.get('goals') as string,
         activity_routine: formData.get('routine') as string,
-        pain_injuries: formData.get('pain') as string,
+        pain_injuries: null,
         reference_source: formData.get('refSource') as string,
         reference_name: formData.get('refName') as string || null,
         consent_given: true
@@ -211,17 +211,6 @@ const FormPT = () => {
                         id="routine"
                         name="routine"
                         placeholder="z. B. 2×/Woche Spazieren, 1× Yoga …"
-                        rows={3}
-                        required
-                      />
-                    </div>
-
-                    <div>
-                      <Label htmlFor="pain">Schmerzen, Verletzungen oder körperliche Einschränkungen? *</Label>
-                      <Textarea
-                        id="pain"
-                        name="pain"
-                        placeholder="Bitte beschreiben Sie eventuelle Schmerzen, Verletzungen oder körperliche Einschränkungen."
                         rows={3}
                         required
                       />
