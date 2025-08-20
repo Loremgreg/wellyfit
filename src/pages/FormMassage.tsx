@@ -64,6 +64,7 @@ const FormMassage = () => {
           email: requestData.email,
           phone: requestData.phone,
           type: 'wellness-massage',
+          captchaToken: captchaValue,
           formData: {
             pain_injuries: requestData.pain_injuries,
             availability: requestData.availability_notes,
@@ -74,6 +75,18 @@ const FormMassage = () => {
 
       if (emailError) {
         console.error('Erreur notification:', emailError);
+        // Check if it's a reCAPTCHA error
+        if (emailError.message?.includes('reCAPTCHA')) {
+          toast({
+            title: "reCAPTCHA-Überprüfung fehlgeschlagen",
+            description: "Bitte versuchen Sie das reCAPTCHA erneut.",
+            variant: "destructive",
+          });
+          recaptchaRef.current?.reset();
+          setCaptchaValue(null);
+          setIsSubmitting(false);
+          return;
+        }
       }
 
       toast({

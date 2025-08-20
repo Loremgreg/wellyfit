@@ -65,6 +65,7 @@ const FormPT = () => {
           email: requestData.email,
           phone: requestData.phone,
           type: 'personal-training',
+          captchaToken: captchaValue,
           formData: {
             goals: requestData.goals,
             background: requestData.background,
@@ -76,6 +77,18 @@ const FormPT = () => {
 
       if (emailError) {
         console.error('Erreur notification:', emailError);
+        // Check if it's a reCAPTCHA error
+        if (emailError.message?.includes('reCAPTCHA')) {
+          toast({
+            title: "reCAPTCHA-Überprüfung fehlgeschlagen",
+            description: "Bitte versuchen Sie das reCAPTCHA erneut.",
+            variant: "destructive",
+          });
+          recaptchaRef.current?.reset();
+          setCaptchaValue(null);
+          setIsSubmitting(false);
+          return;
+        }
       }
 
       toast({

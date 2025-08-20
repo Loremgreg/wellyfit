@@ -16,6 +16,35 @@ interface FormNotificationRequest {
   phone?: string;
   type: 'personal-training' | 'wellness-massage';
   formData: any;
+  captchaToken: string;
+}
+
+// Function to verify reCAPTCHA token with Google
+async function verifyRecaptcha(token: string): Promise<boolean> {
+  try {
+    const secretKey = Deno.env.get("RECAPTCHA_SECRET_KEY");
+    if (!secretKey) {
+      console.error("RECAPTCHA_SECRET_KEY not found in environment variables");
+      return false;
+    }
+
+    const verificationURL = "https://www.google.com/recaptcha/api/siteverify";
+    const response = await fetch(verificationURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: `secret=${secretKey}&response=${token}`,
+    });
+
+    const result = await response.json();
+    console.log("reCAPTCHA verification result:", result);
+    
+    return result.success === true;
+  } catch (error) {
+    console.error("Error verifying reCAPTCHA:", error);
+    return false;
+  }
 }
 
 const handler = async (req: Request): Promise<Response> => {
@@ -25,7 +54,33 @@ const handler = async (req: Request): Promise<Response> => {
   }
 
   try {
-    const { firstName, lastName, email, phone, type, formData }: FormNotificationRequest = await req.json();
+    const { firstName, lastName, email, phone, type, formData, captchaToken }: FormNotificationRequest = await req.json();
+
+    // Verify reCAPTCHA token first
+    if (!captchaToken) {
+      console.error("No reCAPTCHA token provided");
+      return new Response(
+        JSON.stringify({ error: "reCAPTCHA verification required" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    const isRecaptchaValid = await verifyRecaptcha(captchaToken);
+    if (!isRecaptchaValid) {
+      console.error("reCAPTCHA verification failed");
+      return new Response(
+        JSON.stringify({ error: "reCAPTCHA verification failed" }),
+        {
+          status: 400,
+          headers: { "Content-Type": "application/json", ...corsHeaders },
+        }
+      );
+    }
+
+    console.log("reCAPTCHA verification successful");
 
     const isPersonalTraining = type === 'personal-training';
     const subject = isPersonalTraining 
