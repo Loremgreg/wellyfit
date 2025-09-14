@@ -114,7 +114,7 @@ const handler = async (req: Request): Promise<Response> => {
 
     const emailResponse = await resend.emails.send({
       from: "Gregory Bast Notifications <onboarding@resend.dev>",
-      to: ["gregorybastin.de@gmail.com"],
+      to: ["contact.gregory.bast@gmail.com"],
       subject,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
